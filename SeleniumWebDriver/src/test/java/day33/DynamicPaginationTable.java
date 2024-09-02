@@ -36,6 +36,8 @@ public class DynamicPaginationTable {
 				boolean isChecked = driver.findElement(By.xpath("//table[@id='productTable']/tbody//tr["+rNo+"]/td[4]//input")).isSelected();
 				
 				System.out.println(id+ "\t"+ name+ "\t"+ price+ "\t"+ isChecked);
+				
+				System.out.println("Done!!!");
 			}
 			
 		}
