@@ -94,7 +94,9 @@ public class SliderDemo {
 		driver.get("https://www.jqueryscript.net/demo/Price-Range-Slider-jQuery-UI/");
 		driver.manage().window().maximize();
 		
+
 		sliderAdjust(driver, 1700, 8900);
+
 	}
 
 }
