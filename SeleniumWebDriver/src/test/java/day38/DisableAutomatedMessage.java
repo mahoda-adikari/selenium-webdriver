@@ -1,16 +1,20 @@
-package day21;
+package day38;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
-public class FirstTestCase {
+public class DisableAutomatedMessage {
 
 	public static void main(String[] args) {
 
 		System.out.println("Testing...");
 		
+		EdgeOptions eOptions = new EdgeOptions();
+		eOptions.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+		
 //		ChromeDriver driver = new ChromeDriver();
-		WebDriver driver = new EdgeDriver();
+		WebDriver driver = new EdgeDriver(eOptions);
 		driver.get("https://demo.opencart.com/");
 		String actVal = driver.getTitle();
 		String expVal = "Your Store";
@@ -21,7 +25,7 @@ public class FirstTestCase {
 			System.out.println("Expected value: "+ expVal+ "\nActual Value: "+ actVal);
 		}
 //		driver.close();
-		driver.quit();
+//		driver.quit();
 	}
 
 }
