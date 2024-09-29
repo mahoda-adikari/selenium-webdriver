@@ -70,7 +70,7 @@ public class ExcelUtils {
 	}
 	
 	
-	public static void setCellData(String xlFile, String xlSheet, int rowNum, int colNum, int data) throws FileNotFoundException, IOException{
+	public static void setCellData(String xlFile, String xlSheet, int rowNum, int colNum, String data) throws FileNotFoundException, IOException{
 		fi = new FileInputStream(xlFile);
 		wb = new XSSFWorkbook(fi);
 		ws = wb.getSheet(xlSheet);
@@ -86,27 +86,55 @@ public class ExcelUtils {
 	}
 	
 	
-	public static void fillGreen(String xlFile, String xlSheet, int rowNum, int colNum) throws FileNotFoundException, IOException{
-		fi = new FileInputStream(xlFile);
-		wb = new XSSFWorkbook(fi);
-		ws = wb.getSheet(xlSheet);
-		row = ws.getRow(rowNum);
-		cell = row.getCell(colNum);
-		
-		style = wb.createCellStyle();
-		style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-		style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-		
-		cell.setCellStyle(style);
-		fo = new FileOutputStream(xlFile);
-		wb.write(fo);
-		wb.close();
-		fi.close();
-		fo.close();
-	}
+//	public static void fillGreen(String xlFile, String xlSheet, int rowNum, int colNum) throws FileNotFoundException, IOException{
+//		fi = new FileInputStream(xlFile);
+//		wb = new XSSFWorkbook(fi);
+//		ws = wb.getSheet(xlSheet);
+//		row = ws.getRow(rowNum);
+//		cell = row.getCell(colNum);
+//		
+//		style = wb.createCellStyle();
+//		style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
+//		style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//		
+//		cell.setCellStyle(style);
+//		fo = new FileOutputStream(xlFile);
+//		wb.write(fo);
+//		wb.close();
+//		fi.close();
+//		fo.close();
+//	}
+//	
+//	
+//	public static void fillRed(String xlFile, String xlSheet, int rowNum, int colNum) throws FileNotFoundException, IOException{
+//		fi = new FileInputStream(xlFile);
+//		wb = new XSSFWorkbook(fi);
+//		ws = wb.getSheet(xlSheet);
+//		row = ws.getRow(rowNum);
+//		cell = row.getCell(colNum);
+//		
+//		style = wb.createCellStyle();
+//		style.setFillForegroundColor(IndexedColors.RED.getIndex());
+//		style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+//		
+//		cell.setCellStyle(style);
+//		fo = new FileOutputStream(xlFile);
+//		wb.write(fo);
+//		wb.close();
+//		fi.close();
+//		fo.close();
+//	}
 	
+	
+	public static void fillGreen(String xlFile, String xlSheet, int rowNum, int colNum) throws FileNotFoundException, IOException{
+		applyColor(xlFile, xlSheet, rowNum, colNum, IndexedColors.GREEN);
+	}
 	
 	public static void fillRed(String xlFile, String xlSheet, int rowNum, int colNum) throws FileNotFoundException, IOException{
+		applyColor(xlFile, xlSheet, rowNum, colNum, IndexedColors.RED);
+	}
+	
+	public static void applyColor(String xlFile, String xlSheet, int rowNum, int colNum, IndexedColors color) throws FileNotFoundException, IOException{
 		fi = new FileInputStream(xlFile);
 		wb = new XSSFWorkbook(fi);
 		ws = wb.getSheet(xlSheet);
@@ -114,16 +142,15 @@ public class ExcelUtils {
 		cell = row.getCell(colNum);
 		
 		style = wb.createCellStyle();
-		style.setFillForegroundColor(IndexedColors.RED.getIndex());
-		style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-		
-		cell.setCellStyle(style);
+        style.setFillForegroundColor(color.getIndex());
+        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        
+        cell.setCellStyle(style);
 		fo = new FileOutputStream(xlFile);
 		wb.write(fo);
 		wb.close();
 		fi.close();
 		fo.close();
 	}
-	
 
 }
