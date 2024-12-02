@@ -28,8 +28,7 @@ public class ReadingPropertiesFile {
 		System.out.println(valueSetString);
 		
 		fi.close();
-		
-		//testDelDev
+
 	}
 
 }
