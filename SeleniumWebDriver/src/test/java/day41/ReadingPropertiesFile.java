@@ -29,7 +29,7 @@ public class ReadingPropertiesFile {
 		
 		fi.close();
 		
-
+//testDel
 	}
 
 }
