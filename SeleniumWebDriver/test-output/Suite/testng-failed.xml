@@ -3,12 +3,19 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="day42.OrangeHRMTest">
+      <class name="day43.AllAnnotations">
         <methods>
-          <include name="login"/>
-          <include name="logout"/>
+          <include name="search"/>
+          <include name="bs"/>
+          <include name="bc"/>
+          <include name="at"/>
+          <include name="as"/>
+          <include name="bt"/>
+          <include name="ac"/>
+          <include name="bm"/>
+          <include name="am"/>
         </methods>
-      </class> <!-- day42.OrangeHRMTest -->
+      </class> <!-- day43.AllAnnotations -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

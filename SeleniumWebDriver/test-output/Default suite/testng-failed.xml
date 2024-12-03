@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="day42.OrangeHRMTest">
+      <class name="day43.HardVsSoftAssertions">
         <methods>
-          <include name="checkLogo"/>
+          <include name="testHardAssertion"/>
+          <include name="testSoftAssertion"/>
         </methods>
-      </class> <!-- day42.OrangeHRMTest -->
+      </class> <!-- day43.HardVsSoftAssertions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
