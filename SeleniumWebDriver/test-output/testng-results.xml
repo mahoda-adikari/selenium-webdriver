@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-04T00:35:49 IST" name="Default suite" finished-at="2024-12-04T00:35:49 IST" duration-ms="53">
+  <suite started-at="2024-12-04T17:53:37 IST" name="Default suite" finished-at="2024-12-04T17:53:37 IST" duration-ms="62">
     <groups>
     </groups>
-    <test started-at="2024-12-04T00:35:49 IST" name="Default test" finished-at="2024-12-04T00:35:49 IST" duration-ms="53">
-      <class name="day43.HardVsSoftAssertions">
-        <test-method signature="testHardAssertion()[pri:0, instance:day43.HardVsSoftAssertions@50eac852]" started-at="2024-12-04T00:35:49 IST" name="testHardAssertion" finished-at="2024-12-04T00:35:49 IST" duration-ms="12" status="FAIL">
+    <test started-at="2024-12-04T17:53:37 IST" name="Default test" finished-at="2024-12-04T17:53:37 IST" duration-ms="62">
+      <class name="day44.DependencyMethods">
+        <test-method signature="openApp()[pri:1, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="openApp" finished-at="2024-12-04T17:53:37 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="login()[pri:2, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="login" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.openApp" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="search()[pri:3, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="search" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.login" duration-ms="1" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [2] but found [1]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [2] but found [1]
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:907)
-at org.testng.Assert.assertEquals(Assert.java:917)
-at day43.HardVsSoftAssertions.testHardAssertion(HardVsSoftAssertions.java:14)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at day44.DependencyMethods.search(DependencyMethods.java:20)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -52,27 +58,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHardAssertion -->
-        <test-method signature="testSoftAssertion()[pri:0, instance:day43.HardVsSoftAssertions@50eac852]" started-at="2024-12-04T00:35:49 IST" name="testSoftAssertion" finished-at="2024-12-04T00:35:49 IST" duration-ms="4" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- search -->
+        <test-method signature="advSearch()[pri:4, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="advSearch" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.search, day44.DependencyMethods.login" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[The following asserts failed:
-expected [2] but found [1]]]>
+              <![CDATA[Method DependencyMethods.advSearch()[pri:4, instance:day44.DependencyMethods@2f7298b] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [2] but found [1]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at day43.HardVsSoftAssertions.testSoftAssertion(HardVsSoftAssertions.java:31)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+              <![CDATA[java.lang.Throwable: Method DependencyMethods.advSearch()[pri:4, instance:day44.DependencyMethods@2f7298b] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -93,11 +87,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSoftAssertion -->
-      </class> <!-- day43.HardVsSoftAssertions -->
+        </test-method> <!-- advSearch -->
+        <test-method signature="logout()[pri:5, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="logout" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.login" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- day44.DependencyMethods -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
