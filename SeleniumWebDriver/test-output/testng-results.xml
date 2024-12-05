@@ -1,101 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-04T17:53:37 IST" name="Default suite" finished-at="2024-12-04T17:53:37 IST" duration-ms="62">
+  <suite started-at="2024-12-05T16:23:33 IST" name="groupingTestSuit" finished-at="2024-12-05T16:23:33 IST" duration-ms="66">
     <groups>
+      <group name="regression">
+        <method signature="PaymentTests.paymentInDollars()[pri:1, instance:day44.PaymentTests@43195e57]" name="paymentInDollars" class="day44.PaymentTests"/>
+        <method signature="PaymentTests.paymentInRupees()[pri:1, instance:day44.PaymentTests@43195e57]" name="paymentInRupees" class="day44.PaymentTests"/>
+        <method signature="SignupTests.signupByEmail()[pri:1, instance:day44.SignupTests@1ab3a8c8]" name="signupByEmail" class="day44.SignupTests"/>
+        <method signature="SignupTests.signupByFacebook()[pri:2, instance:day44.SignupTests@1ab3a8c8]" name="signupByFacebook" class="day44.SignupTests"/>
+        <method signature="SignupTests.signupByTwitter()[pri:3, instance:day44.SignupTests@1ab3a8c8]" name="signupByTwitter" class="day44.SignupTests"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="LoginTests.loginByEmail()[pri:1, instance:day44.LoginTests@7714e963]" name="loginByEmail" class="day44.LoginTests"/>
+        <method signature="LoginTests.loginByFacebook()[pri:2, instance:day44.LoginTests@7714e963]" name="loginByFacebook" class="day44.LoginTests"/>
+        <method signature="LoginTests.loginByTwitter()[pri:3, instance:day44.LoginTests@7714e963]" name="loginByTwitter" class="day44.LoginTests"/>
+        <method signature="PaymentTests.paymentInDollars()[pri:1, instance:day44.PaymentTests@43195e57]" name="paymentInDollars" class="day44.PaymentTests"/>
+        <method signature="PaymentTests.paymentInRupees()[pri:1, instance:day44.PaymentTests@43195e57]" name="paymentInRupees" class="day44.PaymentTests"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-12-04T17:53:37 IST" name="Default test" finished-at="2024-12-04T17:53:37 IST" duration-ms="62">
-      <class name="day44.DependencyMethods">
-        <test-method signature="openApp()[pri:1, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="openApp" finished-at="2024-12-04T17:53:37 IST" duration-ms="12" status="PASS">
+    <test started-at="2024-12-05T16:23:33 IST" name="groupingTests" finished-at="2024-12-05T16:23:33 IST" duration-ms="66">
+      <class name="day44.PaymentTests">
+        <test-method signature="paymentInDollars()[pri:1, instance:day44.PaymentTests@43195e57]" started-at="2024-12-05T16:23:33 IST" name="paymentInDollars" finished-at="2024-12-05T16:23:33 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="login()[pri:2, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="login" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.openApp" duration-ms="1" status="PASS">
+        </test-method> <!-- paymentInDollars -->
+        <test-method signature="paymentInRupees()[pri:1, instance:day44.PaymentTests@43195e57]" started-at="2024-12-05T16:23:33 IST" name="paymentInRupees" finished-at="2024-12-05T16:23:33 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="search()[pri:3, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="search" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.login" duration-ms="1" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at day44.DependencyMethods.search(DependencyMethods.java:20)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- paymentInRupees -->
+      </class> <!-- day44.PaymentTests -->
+      <class name="day44.SignupTests">
+        <test-method signature="signupByEmail()[pri:1, instance:day44.SignupTests@1ab3a8c8]" started-at="2024-12-05T16:23:33 IST" name="signupByEmail" finished-at="2024-12-05T16:23:33 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method signature="advSearch()[pri:4, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="advSearch" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.search, day44.DependencyMethods.login" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method DependencyMethods.advSearch()[pri:4, instance:day44.DependencyMethods@2f7298b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method DependencyMethods.advSearch()[pri:4, instance:day44.DependencyMethods@2f7298b] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- signupByEmail -->
+        <test-method signature="signupByFacebook()[pri:2, instance:day44.SignupTests@1ab3a8c8]" started-at="2024-12-05T16:23:33 IST" name="signupByFacebook" finished-at="2024-12-05T16:23:33 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advSearch -->
-        <test-method signature="logout()[pri:5, instance:day44.DependencyMethods@2f7298b]" started-at="2024-12-04T17:53:37 IST" name="logout" finished-at="2024-12-04T17:53:37 IST" depends-on-methods="day44.DependencyMethods.login" duration-ms="1" status="PASS">
+        </test-method> <!-- signupByFacebook -->
+        <test-method signature="signupByTwitter()[pri:3, instance:day44.SignupTests@1ab3a8c8]" started-at="2024-12-05T16:23:33 IST" name="signupByTwitter" finished-at="2024-12-05T16:23:33 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- day44.DependencyMethods -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- signupByTwitter -->
+      </class> <!-- day44.SignupTests -->
+      <class name="day44.LoginTests">
+        <test-method signature="loginByEmail()[pri:1, instance:day44.LoginTests@7714e963]" started-at="2024-12-05T16:23:33 IST" name="loginByEmail" finished-at="2024-12-05T16:23:33 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByEmail -->
+        <test-method signature="loginByFacebook()[pri:2, instance:day44.LoginTests@7714e963]" started-at="2024-12-05T16:23:33 IST" name="loginByFacebook" finished-at="2024-12-05T16:23:33 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByFacebook -->
+        <test-method signature="loginByTwitter()[pri:3, instance:day44.LoginTests@7714e963]" started-at="2024-12-05T16:23:33 IST" name="loginByTwitter" finished-at="2024-12-05T16:23:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByTwitter -->
+      </class> <!-- day44.LoginTests -->
+    </test> <!-- groupingTests -->
+  </suite> <!-- groupingTestSuit -->
 </testng-results>
