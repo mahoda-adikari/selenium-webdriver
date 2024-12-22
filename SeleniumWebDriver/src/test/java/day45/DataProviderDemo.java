@@ -46,7 +46,7 @@ public class DataProviderDemo {
 		driver.close();
 	}
 	
-	@DataProvider(name = "dp")
+	@DataProvider(name = "dp", indices = {0, 3})
 	Object[][] loginData() {
 		Object[][] loginCreds = {
 	            {"ayo@xmail.com", "ayo123"},
