@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-28T01:13:36 IST" name="Suite" finished-at="2024-12-28T01:13:44 IST" duration-ms="7876">
+  <suite started-at="2024-12-29T03:32:41 IST" name="Suite" finished-at="2024-12-29T03:32:53 IST" duration-ms="11607">
     <groups>
     </groups>
-    <test started-at="2024-12-28T01:13:36 IST" name="Test" finished-at="2024-12-28T01:13:44 IST" duration-ms="7876">
+    <test started-at="2024-12-29T03:32:41 IST" name="Test" finished-at="2024-12-29T03:32:53 IST" duration-ms="11607">
       <class name="day46.OrangeHRM">
-        <test-method is-config="true" signature="setup()[pri:0, instance:day46.OrangeHRM@4f18837a]" started-at="2024-12-28T01:13:36 IST" name="setup" finished-at="2024-12-28T01:13:44 IST" duration-ms="7565" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:day46.OrangeHRM@4fb0f2b9]" started-at="2024-12-29T03:32:42 IST" name="setup" finished-at="2024-12-29T03:32:53 IST" duration-ms="11056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogo()[pri:1, instance:day46.OrangeHRM@4f18837a]" started-at="2024-12-28T01:13:44 IST" name="testLogo" finished-at="2024-12-28T01:13:44 IST" duration-ms="63" status="PASS">
+        <test-method signature="testLogo()[pri:1, instance:day46.OrangeHRM@4fb0f2b9]" started-at="2024-12-29T03:32:53 IST" name="testLogo" finished-at="2024-12-29T03:32:53 IST" duration-ms="41" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogo -->
-        <test-method signature="testAppURL()[pri:2, instance:day46.OrangeHRM@4f18837a]" started-at="2024-12-28T01:13:44 IST" name="testAppURL" finished-at="2024-12-28T01:13:44 IST" duration-ms="0" status="FAIL">
+        <test-method signature="testAppURL()[pri:2, instance:day46.OrangeHRM@4fb0f2b9]" started-at="2024-12-29T03:32:53 IST" name="testAppURL" finished-at="2024-12-29T03:32:53 IST" duration-ms="10" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [https://opensource-demo.orangehrmWRONGURL.com/web/index.php/auth/login] but found [https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]]>
@@ -61,17 +61,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAppURL -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:day46.OrangeHRM@4f18837a]" started-at="2024-12-28T01:13:44 IST" name="tearDown" finished-at="2024-12-28T01:13:44 IST" duration-ms="216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="testHomePageTitle()[pri:3, instance:day46.OrangeHRM@4f18837a]" started-at="2024-12-28T01:13:44 IST" name="testHomePageTitle" finished-at="2024-12-28T01:13:44 IST" depends-on-methods="day46.OrangeHRM.testAppURL" duration-ms="0" status="SKIP">
+        <test-method signature="testHomePageTitle()[pri:3, instance:day46.OrangeHRM@4fb0f2b9]" started-at="2024-12-29T03:32:53 IST" name="testHomePageTitle" finished-at="2024-12-29T03:32:53 IST" depends-on-methods="day46.OrangeHRM.testAppURL" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method OrangeHRM.testHomePageTitle()[pri:3, instance:day46.OrangeHRM@4f18837a] depends on not successfully finished methods]]>
+              <![CDATA[Method OrangeHRM.testHomePageTitle()[pri:3, instance:day46.OrangeHRM@4fb0f2b9] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method OrangeHRM.testHomePageTitle()[pri:3, instance:day46.OrangeHRM@4f18837a] depends on not successfully finished methods
+              <![CDATA[java.lang.Throwable: Method OrangeHRM.testHomePageTitle()[pri:3, instance:day46.OrangeHRM@4fb0f2b9] depends on not successfully finished methods
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -97,6 +93,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHomePageTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:day46.OrangeHRM@4fb0f2b9]" started-at="2024-12-29T03:32:53 IST" name="tearDown" finished-at="2024-12-29T03:32:53 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- day46.OrangeHRM -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
